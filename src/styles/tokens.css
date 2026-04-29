@@ -1,0 +1,16 @@
+/*Este arquivo ficará as variaveis do css*/
+:root {
+  /* Colors */
+  --color-primary: #6200ee;
+  --color-background: #ffffff;
+  --color-text: #121212;
+
+  /* Typography */
+  --font-main: 'Inter', sans-serif;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-md: 1rem;
+}
