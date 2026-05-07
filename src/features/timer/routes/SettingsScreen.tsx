@@ -16,7 +16,7 @@ export function SettingsScreen() {
 
   useEffect(() => {
     document.title = t('timer.settings') + ' - Aion Pomodoro';
-  }, []);
+  }, [t]);
 
   function handleSaveSettings(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();

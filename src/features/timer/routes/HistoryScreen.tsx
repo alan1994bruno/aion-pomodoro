@@ -36,7 +36,7 @@ export function HistoryScreen() {
 
   useEffect(() => {
     document.title = t('timer.history') + ' - Aion Pomodoro';
-  }, []);
+  }, [t]);
 
   useEffect(() => {
     if (!confirmClearHistory) return;

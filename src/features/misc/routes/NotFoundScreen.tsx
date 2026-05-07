@@ -7,7 +7,7 @@ export function NotFoundScreen() {
   const { t } = useTranslation('misc');
   useEffect(() => {
     document.title = t('misc.pageNotFound') + ' - Aion Pomodoro';
-  }, []);
+  }, [t]);
 
   return (
     <>

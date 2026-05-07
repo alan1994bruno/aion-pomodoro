@@ -8,7 +8,7 @@ export function AboutScreen() {
 
   useEffect(() => {
     document.title = t('misc.understandPomodoroTechnique') + ' - Aion Pomodoro';
-  }, []);
+  }, [t]);
 
   return (
     <>
