@@ -1,8 +1,3 @@
-/*
-Ele "zera" ou "normaliza" essas diferenças antes de você começar a escrever seu código. 
-Sem um reset, você acaba gastando tempo corrigindo bugs de layout que só aparecem em um 
-navegador específico.
-*/
 *,
 *::before,
 *::after {
