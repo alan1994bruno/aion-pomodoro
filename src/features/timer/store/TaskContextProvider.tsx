@@ -26,29 +26,33 @@ export function TaskContextProvider({ children }: TaskContextProviderProps) {
       formattedSecondsRemaining: '00:00',
     };
   });
-  const playBeepRef = useRef<ReturnType<typeof loadBeep> | null>(null);
 
+  const playBeepRef = useRef<ReturnType<typeof loadBeep> | null>(null);
   const worker = TimerWorkerManager.getInstance();
 
-  worker.onmessage(e => {
-    const countDownSeconds = e.data;
+  useEffect(() => {
+    const handleWorkerMessage = (e: MessageEvent<number>) => {
+      const countDownSeconds = e.data;
 
-    if (countDownSeconds <= 0) {
-      if (playBeepRef.current) {
-        playBeepRef.current();
-        playBeepRef.current = null;
+      if (countDownSeconds <= 0) {
+        if (playBeepRef.current) {
+          playBeepRef.current();
+          playBeepRef.current = null;
+        }
+        dispatch({ type: 'COMPLETE_TASK' });
+        worker.terminate();
+      } else {
+        dispatch({
+          type: 'COUNT_DOWN',
+          payload: { secondsRemaining: countDownSeconds },
+        });
       }
-      dispatch({
-        type: 'COMPLETE_TASK',
-      });
-      worker.terminate();
-    } else {
-      dispatch({
-        type: 'COUNT_DOWN',
-        payload: { secondsRemaining: countDownSeconds },
-      });
-    }
-  });
+    };
+
+    worker.onmessage(handleWorkerMessage);
+
+    return () => {};
+  }, [worker]);
 
   useEffect(() => {
     localStorage.setItem('state', JSON.stringify(state));
