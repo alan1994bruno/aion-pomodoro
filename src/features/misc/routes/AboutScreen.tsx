@@ -2,6 +2,7 @@ import { Heading } from '@/components/ui/Heading';
 import { Link } from '@/components/ui/Link';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import picture from '../../../assets/picture-aion.webp';
 
 export function AboutScreen() {
   const { t } = useTranslation('misc');
@@ -20,7 +21,7 @@ export function AboutScreen() {
         {t('misc.blockTimeStops')}
       </p>
 
-      <img src='https://placehold.co/1920x1080' alt='' />
+      <img src={picture} alt='' />
 
       <h2>{t('misc.traditionalPomodoroWork')}</h2>
       <ul>
