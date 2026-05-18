@@ -1,0 +1,12 @@
+{
+  "commom": {
+    "confirmAction": "Confirmar ação e fechar",
+    "cancelAction": "Cancelar ação e fechar",
+    "understandWorks": "Entenda como funciona a técnica pomodoro",
+    "madeWith": "Feito com 💚",
+    "goHome": "Ir para a Home",
+    "viewHistory": "Ver Histórico",
+    "settings": "Configurações",
+    "changeTheme": "Mudar Tema"
+  }
+}

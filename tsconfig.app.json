@@ -15,11 +15,22 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+    "resolveJsonModule": true,
+
     /* Linting */
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
-  "include": ["src"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.css",
+    "src/**/*.tsx",
+    "src/**/*.json",
+    "src/@types/**/*.d.ts" // Garante que o TypeScript leia suas tipagens customizadas
+  ]
 }

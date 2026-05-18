@@ -1,0 +1,9 @@
+services:
+  aion-pomodoro:
+    container_name: aion-pomodoro-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '8080:80' # Mapeia a porta 8080 do seu PC para a porta 80 do container
+    restart: unless-stopped

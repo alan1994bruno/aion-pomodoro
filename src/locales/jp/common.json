@@ -1,0 +1,12 @@
+{
+  "commom": {
+    "confirmAction": "確定して閉じる",
+    "cancelAction": "キャンセルして閉じる",
+    "understandWorks": "ポモドーロ・テクニックの仕組みを知る",
+    "madeWith": "💚 を込めて作成",
+    "goHome": "ホームへ戻る",
+    "viewHistory": "履歴を表示",
+    "settings": "設定",
+    "changeTheme": "テーマを変更"
+  }
+}

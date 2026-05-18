@@ -1,0 +1,73 @@
+.container {
+  position: fixed;
+  bottom: 2.4rem;
+  left: 2.4rem;
+  z-index: 50;
+}
+
+.triggerButton {
+  background-color: var(--gray-800, #202024);
+  border: 1px solid var(--gray-700, #323238);
+  color: var(--text-default, #c4c4cc);
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.triggerButton:hover {
+  background-color: var(--gray-700, #323238);
+}
+
+.arrow {
+  font-size: 1rem;
+}
+
+.dropdownMenu {
+  position: absolute;
+  bottom: calc(100% + 0.8rem);
+  left: 0;
+
+  background-color: var(--gray-800, #202024);
+  border: 1px solid var(--gray-700, #323238);
+  border-radius: 8px;
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  min-width: 140px;
+}
+
+.dropdownItem {
+  background: transparent;
+  border: none;
+  color: var(--text-default, #c4c4cc);
+  font-size: 1.4rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.dropdownItem:hover {
+  background-color: var(--gray-700, #323238);
+}
+
+.dropdownItem.active {
+  background-color: var(--gray-700, #323238);
+  font-weight: bold;
+  color: #fff;
+}
+
+.flag {
+  font-size: 2rem;
+}
