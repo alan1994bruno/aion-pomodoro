@@ -57,8 +57,6 @@ export function HistoryScreen() {
     });
   }
 
-  console.log('>>>> ', sortedTasks);
-
   return (
     <>
       <Heading>
